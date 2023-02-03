@@ -10,6 +10,9 @@ export function CardPresentation(props) {
                     <i className="fab fa-react"></i>
                     <p>Componente para campo de senha</p>
                 </div>
+                <div className="title-content">
+                    {props.title}
+                </div>
                 <div className="content-description">
                     {props.description}
                 </div>
