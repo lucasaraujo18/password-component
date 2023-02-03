@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import { InputPassword } from './components/passwordComponent/InputPassword';
 
 function App() {
     return (
@@ -18,7 +17,6 @@ function App() {
                 >
                     Learn React
                 </a>
-                <InputPassword />
             </header>
         </div>
     );

@@ -4,11 +4,13 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 import { CardPresentation } from './components/cardContent/CardPresentation';
+import { InputPassword } from './components/passwordComponent/InputPassword';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const component = <InputPassword />
 root.render(
     <React.StrictMode>
-        <CardPresentation></CardPresentation>
+        <CardPresentation component={component}></CardPresentation>
     </React.StrictMode>
 );
 
