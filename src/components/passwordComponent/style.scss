@@ -5,11 +5,14 @@
 }
 
 .template-form {
-    height: 45px;
-    border-radius: 15px;
+    height: 30px;
+    border-radius: 10px;
     width: 40%;
     margin: 0;
     font-size: 20px;
+    border-style: solid !important;
+    border-width: 1px !important;
+    border-color: lightblue !important;
 
     &:focus {
         border-style: solid !important;
