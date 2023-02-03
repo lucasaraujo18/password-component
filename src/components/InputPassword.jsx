@@ -49,7 +49,7 @@ export function InputPassword() {
 
     const Rules = () => {
         rules.forEach(rule => {
-            <li>{rule.title}</li>
+            <li>{rule.passedRule ? rule.icon : ''} {rule.title}</li>
         });
     }
 
@@ -61,9 +61,25 @@ export function InputPassword() {
         )
     }
 
+    const showRulesList = (password) => {
+        const lowerCase = /[a-z]/;
+        const upperCase = /[A-Z]/;
+        const specialChar = /\W/;
+        const numberChar = /\d/;
+
+        password.length > 0 ? setShowList(true) : setShowList(false);
+        password.length >= 8 ? setPassedRule1(true) : setPassedRule1(false);
+
+        lowerCase.test(password) ? setPassedRule2(true) : setPassedRule2(false);
+        upperCase.test(password) ? setPassedRule3(true) : setPassedRule3(false);
+        specialChar.test(password) ? setPassedRule4(true) : setPassedRule4(false);
+        numberChar.test(password) ? setPassedRule5(true) : setPassedRule5(false);
+
+    };
+
     return (
         <>
-            <input type="password" name="test" id="test" />
+            <input type="password" name="test" id="test" onKeyUp={(event) => showRulesList(event.currentTarget.value)} />
             {showList ? <RulesList /> : ''}
         </>
     )
