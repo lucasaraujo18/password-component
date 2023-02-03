@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { RoutesComponent } from './routes/routes';
 
 import './index.css';
+import { MainContent } from './components/mainContent/MainContent';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <RoutesComponent></RoutesComponent>
+        <MainContent></MainContent>
     </React.StrictMode>
 );
 
