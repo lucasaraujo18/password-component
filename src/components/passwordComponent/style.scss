@@ -1,3 +1,17 @@
+.input-password {
+    height: 45px;
+    border-radius: 15px;
+    width: 20%;
+    margin: 10px 0px;
+    font-size: 20px;
+}
+
+.input-password:focus {
+    border-width: 1px !important;
+    border-color: lightblue !important;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
 .rule-passed {
     color: greenyellow;
     font-size: 15px;
@@ -20,3 +34,4 @@
     from {opacity: 0; visibility: hidden}
     to {opacity: 1; visibility: visible}
 }
+
