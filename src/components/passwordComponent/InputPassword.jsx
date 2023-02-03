@@ -80,9 +80,11 @@ export function InputPassword() {
 
     return (
         <>
-            <input className="input-password" type="password" name="test" id="test" onKeyUp={
-                (event) => showRulesList(event.currentTarget.value)} />
-            {showList ? <RulesList /> : ''}
+            <div className="display-component">
+                <input className="input-password" type="password" name="test" id="test" onKeyUp={
+                    (event) => showRulesList(event.currentTarget.value)} />
+                {showList ? <RulesList /> : ''}
+            </div>
         </>
     )
 }

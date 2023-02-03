@@ -1,8 +1,14 @@
+.display-component {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .input-password {
     height: 45px;
     border-radius: 15px;
-    width: 20%;
-    margin: 10px 0px;
+    width: 40%;
+    margin: 0;
     font-size: 20px;
 }
 
@@ -13,14 +19,14 @@
 }
 
 .rule-passed {
-    color: greenyellow;
+    color: darkgreen;
     font-size: 15px;
     margin-bottom: 10px !important;
     text-decoration: line-through;
 }
 
 .rule-not-passed {
-    color: white;
+    color: black;
     font-size: 15px;
     margin-bottom: 10px !important;
 }
@@ -28,6 +34,7 @@
 .show-pass-request {
     animation: listQuest 2s ease;
     list-style: none;
+    padding: 0 !important;
 }
 
 @keyframes listQuest {
