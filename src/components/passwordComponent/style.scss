@@ -4,18 +4,19 @@
     align-items: center;
 }
 
-.input-password {
+.template-form {
     height: 45px;
     border-radius: 15px;
     width: 40%;
     margin: 0;
     font-size: 20px;
-}
 
-.input-password:focus {
-    border-width: 1px !important;
-    border-color: lightblue !important;
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
+    &:focus {
+        border-style: solid !important;
+        border-width: 1px !important;
+        border-color: lightblue !important;
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8) !important;
+    }
 }
 
 .rule-passed {
@@ -32,7 +33,7 @@
 }
 
 .show-pass-request {
-    animation: listQuest 2s ease;
+    animation: listQuest 0.8s ease;
     list-style: none;
     padding: 0 !important;
 }
