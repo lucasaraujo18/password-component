@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
-import { MainContent } from './components/mainContent/MainContent';
+import { RoutesComponent } from './routes/routes';
 
 import './index.css';
 
@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
     <React.StrictMode>
-        <MainContent></MainContent>
+        <RoutesComponent></RoutesComponent>
     </React.StrictMode>
 );
 

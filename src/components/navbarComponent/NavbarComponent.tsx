@@ -1,13 +1,12 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
 
-import "mdb-react-ui-kit/dist/css/mdb.min.css";
 import "./style.scss";
 
-export function navbar() {
+export function NavbarComponent() {
     return (
         <>
-            <div className="nav-bar d-flex justify-content-between">
+            <div className="nav-bar">
                 <ul>
                     <Link to="/">
                         {/* <li>
@@ -36,7 +35,6 @@ export function navbar() {
                     </li>
                 </ul>
             </div>
-
             <Outlet />
         </>
     );
