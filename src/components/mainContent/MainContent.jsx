@@ -2,7 +2,7 @@ import React from "react";
 import { CardPresentation } from "../cardContent/CardPresentation";
 import { InputPassword } from "../passwordComponent/InputPassword";
 
-import './index.scss';
+import './style.scss';
 
 const component = <InputPassword />
 const description = "Componente para validar senha apenas no front, onde aparece uma lista na qual a medida que o campo vai sendo preenchido, a lista vai sendo atualizada e cada item sendo atualizado se for de acordo com a regra."

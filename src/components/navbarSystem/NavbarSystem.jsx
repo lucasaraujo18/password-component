@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../../../public/logo192.png";
 import { Outlet, Link } from "react-router-dom";
 
 import "./style.scss";
@@ -7,15 +6,15 @@ import "./style.scss";
 export function NavbarSystem() {
     return (
         <>
-            <div className="nav-bar d-flex justify-content-between">
+            <div className="nav-bar">
                 <ul>
                     <Link to="/">
                         <li>
-                            <img
+                            {/* <img
                                 src={logo}
                                 className="nav-bar-logo"
                                 alt="logo"
-                            />
+                            /> */}
                         </li>
                     </Link>
                     <Link to="play" className="text-white">

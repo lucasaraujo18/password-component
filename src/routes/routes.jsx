@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { MainContent } from "../components/mainContent/MainContent";
-import { NavbarSystem } from "../components/navbarSystem/navbarSystem";
+import { NavbarSystem } from "../components/navbarSystem/NavbarSystem";
 
 export function RouteSystem() {
     return (
