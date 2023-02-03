@@ -11,16 +11,16 @@ export function NavbarSystem() {
                     <Link to="play" className="text-white">
                         <li>
                             Sobre: &nbsp;
-                            <i class="fab fa-github"></i> &nbsp;
-                            <i class="fab fa-linkedin"></i> &nbsp;
+                            <i className="fab fa-github"></i> &nbsp;
+                            <i className="fab fa-linkedin"></i> &nbsp;
                         </li>
                     </Link>
                 </ul>
                 <ul>
                     <li>
                         Feito com: &nbsp;
-                        <i class="fab fa-react"></i> &nbsp;
-                        <i class="fab fa-css3"></i>
+                        <i className="fab fa-react"></i> &nbsp;
+                        <i className="fab fa-css3"></i>
                     </li>
                 </ul>
             </div>
