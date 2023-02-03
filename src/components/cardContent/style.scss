@@ -1,0 +1,30 @@
+.header {
+    text-align: center;
+    padding: 40px 0;
+    color: #066d89;
+    font-weight: bold;
+}
+
+.header i {
+    font-size: 70px;
+}
+
+.header p {
+    font-size: 25px;
+}
+
+.card-presentation {
+    background-color: white;
+    width: 40%;
+    height: 90%;
+    border-radius: 20px;
+}
+
+.main-content {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
