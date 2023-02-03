@@ -15,18 +15,10 @@
 
 .card-presentation {
     background-color: white;
-    width: 40%;
-    height: 90%;
+    width: fit-content;
+    height: 580px;
     border-radius: 20px;
-}
-
-.main-content {
-    background-color: black;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 30px;
 }
 
 .content-description {
