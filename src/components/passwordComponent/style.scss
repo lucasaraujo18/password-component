@@ -1,21 +1,19 @@
 .rule-passed {
-    color: var(--default-btn-green);
-    font-size: var(--font-size-11);
-    margin-bottom: 0 !important;
+    color: greenyellow;
+    font-size: 15px;
+    margin-bottom: 10px !important;
+    text-decoration: line-through;
 }
 
 .rule-not-passed {
-    color: var(--font-lightGray);
-    font-size: var(--font-size-11);
-    margin-bottom: 0 !important;
-}
-
-.list-rules {
-    list-style: none;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 10px !important;
 }
 
 .show-pass-request {
     animation: listQuest 2s ease;
+    list-style: none;
 }
 
 @keyframes listQuest {

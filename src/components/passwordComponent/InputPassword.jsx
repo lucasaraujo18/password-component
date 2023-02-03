@@ -51,9 +51,12 @@ export function InputPassword() {
 
     const RulesList = () => {
         return (
-            <ul>
+            <ul className="show-pass-request">
                 {rules.map((rule) =>
-                    <li key={rule.key}>{rule.passedRule ? rule.icon : ''} {rule.title}</li>
+                    <li className={rule.passedRule ? 'rule-passed' : 'rule-not-passed'}
+                        key={rule.key}>
+                        {rule.passedRule ? rule.icon : ''} {rule.title}
+                    </li>
                 )}
             </ul>
         )
