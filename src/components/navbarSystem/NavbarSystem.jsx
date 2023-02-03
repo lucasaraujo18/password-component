@@ -8,32 +8,19 @@ export function NavbarSystem() {
         <>
             <div className="nav-bar">
                 <ul>
-                    <Link to="/">
-                        <li>
-                            {/* <img
-                                src={logo}
-                                className="nav-bar-logo"
-                                alt="logo"
-                            /> */}
-                        </li>
-                    </Link>
                     <Link to="play" className="text-white">
                         <li>
-                            Jogar <i className="fab fa-react"></i>
+                            Sobre: &nbsp;
+                            <i class="fab fa-github"></i> &nbsp;
+                            <i class="fab fa-linkedin"></i> &nbsp;
                         </li>
                     </Link>
-                    <li>
-                        Feito com <i className="fab fa-react"></i>
-                        <i className="fab fa-react"></i>
-                        <i className="fab fa-react"></i>
-                    </li>
                 </ul>
                 <ul>
                     <li>
-                        Criar conta <i className="fab fa-react"></i>
-                    </li>
-                    <li>
-                        Entrar <i className="fab fa-react"></i>
+                        Feito com: &nbsp;
+                        <i class="fab fa-react"></i> &nbsp;
+                        <i class="fab fa-css3"></i>
                     </li>
                 </ul>
             </div>

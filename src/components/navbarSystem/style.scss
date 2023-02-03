@@ -3,7 +3,7 @@
     top: 0;
     width: 100%;
     height: fit-content;
-    background-color: #02485b;
+    background-color: rgba(9, 8, 8, 0.913);
     display: flex;
     justify-content: space-between;
 }
@@ -17,9 +17,9 @@
 
 .nav-bar li {
     list-style: none;
-    color: #fff;
+    color: #066d89;
     margin: 0px 10px;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
 }
 
@@ -28,7 +28,7 @@
     width: 0px;
     height: 1px;
     display: block;
-    background: #fff;
+    background: #066d89;
     transition: 600ms;
 }
 
@@ -36,7 +36,11 @@
     width: 100%;
 }
 
-.nav-bar-logo {
-    height: 10vmin;
+.navbar-logo {
+    font-size: 30px !important;
     pointer-events: none;
+}
+
+a {
+    text-decoration: none !important;
 }
