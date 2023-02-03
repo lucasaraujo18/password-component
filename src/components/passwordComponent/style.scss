@@ -1,0 +1,24 @@
+.rule-passed {
+    color: var(--default-btn-green);
+    font-size: var(--font-size-11);
+    margin-bottom: 0 !important;
+}
+
+.rule-not-passed {
+    color: var(--font-lightGray);
+    font-size: var(--font-size-11);
+    margin-bottom: 0 !important;
+}
+
+.list-rules {
+    list-style: none;
+}
+
+.show-pass-request {
+    animation: listQuest 2s ease;
+}
+
+@keyframes listQuest {
+    from {opacity: 0; visibility: hidden}
+    to {opacity: 1; visibility: visible}
+}

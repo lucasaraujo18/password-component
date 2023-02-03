@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { InputPassword } from './components/InputPassword';
+import { InputPassword } from './components/passwordComponent/InputPassword';
 
 function App() {
     return (

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import './style.scss';
+
 export function InputPassword() {
     const [showList, setShowList] = useState(false);
     const [passedRule1, setPassedRule1] = useState(false);
@@ -50,7 +52,9 @@ export function InputPassword() {
     const RulesList = () => {
         return (
             <ul>
-                {rules.map((rule) => <li key={rule.key}>{rule.passedRule ? rule.icon : ''} {rule.title}</li>)}
+                {rules.map((rule) =>
+                    <li key={rule.key}>{rule.passedRule ? rule.icon : ''} {rule.title}</li>
+                )}
             </ul>
         )
     }
@@ -73,7 +77,8 @@ export function InputPassword() {
 
     return (
         <>
-            <input type="password" name="test" id="test" onKeyUp={(event) => showRulesList(event.currentTarget.value)} />
+            <input type="password" name="test" id="test" onKeyUp={
+                (event) => showRulesList(event.currentTarget.value)} />
             {showList ? <RulesList /> : ''}
         </>
     )
