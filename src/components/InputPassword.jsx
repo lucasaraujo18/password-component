@@ -47,16 +47,10 @@ export function InputPassword() {
         },
     ]
 
-    const Rules = () => {
-        rules.forEach(rule => {
-            <li>{rule.passedRule ? rule.icon : ''} {rule.title}</li>
-        });
-    }
-
     const RulesList = () => {
         return (
             <ul>
-                {Rules()}
+                {rules.map((rule) => <li key={rule.key}>{rule.passedRule ? rule.icon : ''} {rule.title}</li>)}
             </ul>
         )
     }
