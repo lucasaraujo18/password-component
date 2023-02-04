@@ -37,6 +37,7 @@
     ]
   },
   "devDependencies": {
+    "react-hook-form": "^7.43.0",
     "sass": "^1.58.0"
   }
 }

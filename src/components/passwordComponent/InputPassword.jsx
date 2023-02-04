@@ -85,8 +85,14 @@ export function InputPassword(props) {
 
     };
 
-    const validation = () => {
-        alert('oi');
+    const handleSubmit = () => {
+        for (let i = 0; i < rules.length; i++) {
+            if (!rules[i].passedRule && rules[i].key !== 0) {
+                rules[i].icon = <i class="far fa-times-circle"></i>;
+            }
+
+        }
+
     }
 
     return (
@@ -95,7 +101,7 @@ export function InputPassword(props) {
                 <input type="password" name="test" id="test" onKeyUp={
                     (event) => showRulesList(event.currentTarget.value)} className="template-form" />
                 {showList ? <RulesList /> : ''}
-                {seeButton ? <ButtonComponent text="Enviar" onSubmit={validation()}></ButtonComponent> : ''}
+                {seeButton ? <ButtonComponent text="Enviar" buttonFunction={() => handleSubmit()}></ButtonComponent> : ''}
             </div>
         </>
     )

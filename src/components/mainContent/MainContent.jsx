@@ -14,7 +14,7 @@ const componentII = <InputPassword />
 const descriptionII = "Componente para validar senha apenas no front. Aditivo de um ícone clicável, na qual o conteúdo digitado na senha pode se tornar visível."
 const titleII = "Senha visível";
 
-const iconIII = <i class="far fa-check-circle"></i>
+const iconIII = <i className="far fa-check-circle"></i>
 const componentIII = <InputPassword seeButton={true} />
 const descriptionIII = "Componente para validar senha apenas no front. Aditivo de um validador, no qual após a senha ser validada. Retorna uma mensagem de sucesso ou os informa os items que não foram preenchidos na lista."
 const titleIII = "Com validação";
