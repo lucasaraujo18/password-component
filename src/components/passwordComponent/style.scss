@@ -13,6 +13,7 @@
     border-style: solid !important;
     border-width: 1px !important;
     border-color: lightblue !important;
+    padding-left: 15px;
 
     &:focus {
         border-style: solid !important;
@@ -39,6 +40,7 @@
     color: darkred;
     font-size: 15px;
     margin-bottom: 0px !important;
+    text-decoration: none !important;
 }
 
 .show-pass-request {
@@ -58,10 +60,8 @@
 }
 
 .row-input i {
-    position: absolute;
-    padding: 10px 0;
+    position: relative;
+    padding: 10px 0 10px 0px;
+    right: 25px;
     cursor: pointer;
-    display: flex;
-    right: 11%;
 }
-

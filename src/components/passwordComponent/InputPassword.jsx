@@ -11,6 +11,7 @@ export function InputPassword(props) {
     const [passedRule4, setPassedRule4] = useState(false);
     const [passedRule5, setPassedRule5] = useState(false);
     const [seeButton, setSeeButton] = useState(false);
+    const [passwordType, setPasswordType] = useState('password');
 
     useEffect(() => {
         setSeeButton(props.seeButton);
@@ -100,22 +101,23 @@ export function InputPassword(props) {
     }
 
     const viewPassword = () => {
-        let password = document.getElementById('test');
-
-        if (password.type === 'password') {
-            password.type = 'text';
+        if (passwordType === 'password') {
+            setPasswordType('text');
         } else {
-            password.type = 'password';
+            setPasswordType('password');
         }
+
     }
 
     return (
         <>
             <div className="display-component">
                 <div className="row-input">
-                    <input type="password" name="test" id="test" onKeyUp={
+                    <input type={passwordType} name="test" id="test" onKeyUp={
                         (event) => showRulesList(event.currentTarget.value)} className="template-form" />
-                    <i className="far fa-eye" onClick={viewPassword}></i>
+                    {passwordType === 'password' ? <i className="far fa-eye-slash" onClick={viewPassword}></i>
+                        : <i className="far fa-eye" onClick={viewPassword}></i>
+                    }
                 </div>
                 {showList ? <RulesList /> : ''}
                 {seeButton ? <ButtonComponent text="Enviar" buttonFunction={() => handleSubmit()}></ButtonComponent> : ''}
