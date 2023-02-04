@@ -10,12 +10,14 @@ export function InputPassword(props) {
     const [passedRule3, setPassedRule3] = useState(false);
     const [passedRule4, setPassedRule4] = useState(false);
     const [passedRule5, setPassedRule5] = useState(false);
-    const [seeButton, setSeeButton] = useState(false);
+    const [showButton, setShowButton] = useState(false);
+    const [showIcon, setShowIcon] = useState(false);
     const [passwordType, setPasswordType] = useState('password');
 
     useEffect(() => {
-        setSeeButton(props.seeButton);
-    }, [props.seeButton]);
+        setShowButton(props.showButton);
+        setShowIcon(props.showIcon);
+    }, [props.showButton, props.showIcon]);
 
     const rules = [
         {
@@ -87,7 +89,7 @@ export function InputPassword(props) {
     };
 
     const handleSubmit = () => {
-        if (seeButton) {
+        if (showButton) {
             for (let i = 0; i < rules.length; i++) {
                 if (!rules[i].passedRule && rules[i].key !== 0) {
                     document.getElementById(rules[i].key).classList.add('rule-invalid');
@@ -115,12 +117,13 @@ export function InputPassword(props) {
                 <div className="row-input">
                     <input type={passwordType} name="test" id="test" onKeyUp={
                         (event) => showRulesList(event.currentTarget.value)} className="template-form" />
-                    {passwordType === 'password' ? <i className="far fa-eye-slash" onClick={viewPassword}></i>
+                    {showIcon ? passwordType === 'password' ?
+                        <i className="far fa-eye-slash" onClick={viewPassword}></i>
                         : <i className="far fa-eye" onClick={viewPassword}></i>
-                    }
+                        : ''}
                 </div>
                 {showList ? <RulesList /> : ''}
-                {seeButton ? <ButtonComponent text="Enviar" buttonFunction={() => handleSubmit()}></ButtonComponent> : ''}
+                {showButton ? <ButtonComponent text="Enviar" buttonFunction={() => handleSubmit()}></ButtonComponent> : ''}
             </div>
         </>
     )
