@@ -64,7 +64,7 @@ export function InputPassword(props) {
             <ul className="show-pass-request">
                 {rules.map((rule) =>
                     <li className={rule.passedRule ? 'rule-passed' : 'rule-not-passed'}
-                        key={rule.key} id={rule.key}>
+                        key={rule.key} id={`${props.name}-${rule.key}`}>
                         {rule.passedRule ? rule.icon : ''} {rule.title}
                     </li>
                 )}
@@ -92,10 +92,10 @@ export function InputPassword(props) {
         if (showButton) {
             for (let i = 0; i < rules.length; i++) {
                 if (!rules[i].passedRule && rules[i].key !== 0) {
-                    document.getElementById(rules[i].key).classList.add('rule-invalid');
-                    document.getElementById(rules[i].key).classList.remove('rule-not-passed');
+                    document.getElementById(`${props.name}-${rules[i].key}`).classList.add('rule-invalid');
+                    document.getElementById(`${props.name}-${rules[i].key}`).classList.remove('rule-not-passed');
 
-                    document.getElementById(rules[i].key).innerHTML = `<i class='far fa-times-circle'></i> ${rules[i].title}`
+                    document.getElementById(`${props.name}-${rules[i].key}`).innerHTML = `<i class='far fa-times-circle'></i> ${rules[i].title}`
                 }
 
             }
@@ -115,7 +115,7 @@ export function InputPassword(props) {
         <>
             <div className="display-component">
                 <div className="row-input">
-                    <input type={passwordType} name="test" id="test" onKeyUp={
+                    <input type={passwordType} name={props.name} id={props.name} onKeyUp={
                         (event) => showRulesList(event.currentTarget.value)} className="template-form" />
                     {showIcon ? passwordType === 'password' ?
                         <i className="far fa-eye-slash" onClick={viewPassword}></i>
