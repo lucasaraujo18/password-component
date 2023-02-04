@@ -86,23 +86,37 @@ export function InputPassword(props) {
     };
 
     const handleSubmit = () => {
-        for (let i = 0; i < rules.length; i++) {
-            if (!rules[i].passedRule && rules[i].key !== 0) {
-                document.getElementById(rules[i].key).classList.add('rule-invalid');
-                document.getElementById(rules[i].key).classList.remove('rule-not-passed');
+        if (seeButton) {
+            for (let i = 0; i < rules.length; i++) {
+                if (!rules[i].passedRule && rules[i].key !== 0) {
+                    document.getElementById(rules[i].key).classList.add('rule-invalid');
+                    document.getElementById(rules[i].key).classList.remove('rule-not-passed');
 
-                document.getElementById(rules[i].key).innerHTML = `<i class='far fa-times-circle'></i> ${rules[i].title}`
+                    document.getElementById(rules[i].key).innerHTML = `<i class='far fa-times-circle'></i> ${rules[i].title}`
+                }
+
             }
-
         }
+    }
 
+    const viewPassword = () => {
+        let password = document.getElementById('test');
+
+        if (password.type === 'password') {
+            password.type = 'text';
+        } else {
+            password.type = 'password';
+        }
     }
 
     return (
         <>
             <div className="display-component">
-                <input type="password" name="test" id="test" onKeyUp={
-                    (event) => showRulesList(event.currentTarget.value)} className="template-form" />
+                <div className="row-input">
+                    <input type="password" name="test" id="test" onKeyUp={
+                        (event) => showRulesList(event.currentTarget.value)} className="template-form" />
+                    <i className="far fa-eye" onClick={viewPassword}></i>
+                </div>
                 {showList ? <RulesList /> : ''}
                 {seeButton ? <ButtonComponent text="Enviar" buttonFunction={() => handleSubmit()}></ButtonComponent> : ''}
             </div>

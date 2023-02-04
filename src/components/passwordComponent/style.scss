@@ -7,7 +7,7 @@
 .template-form {
     height: 30px;
     border-radius: 10px;
-    width: 40%;
+    width: 100%;
     margin: 0;
     font-size: 20px;
     border-style: solid !important;
@@ -50,5 +50,18 @@
 @keyframes listQuest {
     from {opacity: 0; visibility: hidden}
     to {opacity: 1; visibility: visible}
+}
+
+.row-input {
+    display: flex;
+    flex-direction: row;
+}
+
+.row-input i {
+    position: absolute;
+    padding: 10px 0;
+    cursor: pointer;
+    display: flex;
+    right: 11%;
 }
 
