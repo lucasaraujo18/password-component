@@ -6,7 +6,7 @@ export function CardPresentation(props) {
     return (
         <div className="card-presentation">
             <div className="header">
-                <i className="fab fa-react"></i>
+                {props.icon}
             </div>
             <div className="title-content">
                 {props.title}
