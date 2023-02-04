@@ -61,7 +61,7 @@ export function InputPassword(props) {
             <ul className="show-pass-request">
                 {rules.map((rule) =>
                     <li className={rule.passedRule ? 'rule-passed' : 'rule-not-passed'}
-                        key={rule.key}>
+                        key={rule.key} id={rule.key}>
                         {rule.passedRule ? rule.icon : ''} {rule.title}
                     </li>
                 )}
@@ -88,7 +88,10 @@ export function InputPassword(props) {
     const handleSubmit = () => {
         for (let i = 0; i < rules.length; i++) {
             if (!rules[i].passedRule && rules[i].key !== 0) {
-                rules[i].icon = <i class="far fa-times-circle"></i>;
+                document.getElementById(rules[i].key).classList.add('rule-invalid');
+                document.getElementById(rules[i].key).classList.remove('rule-not-passed');
+
+                document.getElementById(rules[i].key).innerHTML = `<i class='far fa-times-circle'></i> ${rules[i].title}`
             }
 
         }
