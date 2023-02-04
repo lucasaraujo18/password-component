@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import "./style.scss";
 
@@ -8,13 +8,11 @@ export function NavbarSystem() {
         <>
             <div className="nav-bar">
                 <ul>
-                    <Link to="play" className="text-white">
-                        <li>
-                            Sobre: &nbsp;
-                            <i className="fab fa-github"></i> &nbsp;
-                            <i className="fab fa-linkedin"></i> &nbsp;
-                        </li>
-                    </Link>
+                    <li>
+                        Contato: &nbsp;
+                        <a href="https://github.com/lucasaraujo18" target="_blank" rel="noreferrer"><i className="fab fa-github"></i> &nbsp;</a>
+                        <a href="https://br.linkedin.com/in/lucas-de-araújo-florencio-a0a223229?trk=public_profile_browsemap" target="_blank" rel="noreferrer"><i className="fab fa-linkedin"></i> &nbsp;</a>
+                    </li>
                 </ul>
                 <ul>
                     <li>

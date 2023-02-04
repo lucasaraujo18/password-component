@@ -38,7 +38,7 @@ export function MainContent() {
                     component={componentIII}
                     description={descriptionIII}
                     title={titleIII}></CardPresentation>
-            </div >
+            </div>
         </div >
     )
 }
