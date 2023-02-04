@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ButtonComponent } from '../buttonComponent/ButtonComponent';
 
 import './style.scss';
 
-export function InputPassword() {
+export function InputPassword(props) {
     const [showList, setShowList] = useState(false);
     const [passedRule1, setPassedRule1] = useState(false);
     const [passedRule2, setPassedRule2] = useState(false);
     const [passedRule3, setPassedRule3] = useState(false);
     const [passedRule4, setPassedRule4] = useState(false);
     const [passedRule5, setPassedRule5] = useState(false);
+    const [seeButton, setSeeButton] = useState(false);
+
+    useEffect(() => {
+        setSeeButton(props.seeButton);
+    }, [props.seeButton]);
 
     const rules = [
         {
@@ -50,6 +55,7 @@ export function InputPassword() {
         },
     ]
 
+
     const RulesList = () => {
         return (
             <ul className="show-pass-request">
@@ -89,7 +95,7 @@ export function InputPassword() {
                 <input type="password" name="test" id="test" onKeyUp={
                     (event) => showRulesList(event.currentTarget.value)} className="template-form" />
                 {showList ? <RulesList /> : ''}
-                <ButtonComponent text="Enviar"></ButtonComponent>
+                {seeButton ? <ButtonComponent text="Enviar"></ButtonComponent> : ''}
             </div>
         </>
     )
