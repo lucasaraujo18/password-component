@@ -3,6 +3,7 @@ import { CardPresentation } from "../cardContent/CardPresentation";
 import { InputPassword } from "../passwordComponent/InputPassword";
 
 import './style.scss';
+import './mobile.scss';
 
 const icon = <i className="fab fa-react"></i>
 const component = <InputPassword name={'basic'} />
