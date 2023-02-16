@@ -1,6 +1,7 @@
 import React from "react";
 
 import './style.scss';
+import './mobile.scss';
 
 export function CardPresentation(props) {
     return (

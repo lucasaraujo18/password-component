@@ -1,0 +1,29 @@
+@media (max-width: 420px) {
+    .card-presentation {
+        width: 80%;
+        height: 25%;
+        margin: 15px 10px;
+    }
+
+    .content-description {
+        text-align: center;
+        padding: 0px 20px;
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .header {
+        padding: 15px 0px 10px 5px;
+    }
+
+    .header i {
+        font-size: 40px;
+    }
+
+    .title-content {
+        padding: 0;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { ButtonComponent } from '../buttonComponent/ButtonComponent';
 
 import './style.scss';
+import './mobile.scss';
 
 export function InputPassword(props) {
     const [showList, setShowList] = useState(false);

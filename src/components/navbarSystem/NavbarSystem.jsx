@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 
 import "./style.scss";
+import "./mobile.scss";
 
 export function NavbarSystem() {
     return (
