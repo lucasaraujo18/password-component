@@ -4,6 +4,7 @@ import { InputPassword } from "../passwordComponent/InputPassword";
 
 import './style.scss';
 import './mobile.scss';
+import { NavbarSystem } from "../navbarSystem/NavbarSystem";
 
 const icon = <i className="fab fa-react"></i>
 const component = <InputPassword name={'basic'} />
@@ -23,6 +24,7 @@ const titleIII = "Com validação";
 export function MainContent() {
     return (
         <div className="main-content">
+            <NavbarSystem />
             <div className="card-row">
                 <CardPresentation
                     icon={icon}
