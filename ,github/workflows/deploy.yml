@@ -22,4 +22,4 @@ jobs:
               env:
                   webhook_url: "https://webhook.site/06d80697-f4ab-4ff7-ab16-89381b1e18db"
                   webhook_secret: "06d80697-f4ab-4ff7-ab16-89381b1e18db@email.webhook.site"
-                  data: '{ "server": "15", "site": "Password component"}'
+                  data: '{ "server": "1", "site": "site 1"}'
