@@ -20,6 +20,5 @@ jobs:
             - name: Invoke deployment hook
               uses: distributhor/workflow-webhook@v2
               env:
-                  webhook_url: "https://webhook.site/06d80697-f4ab-4ff7-ab16-89381b1e18db"
-                  webhook_secret: "06d80697-f4ab-4ff7-ab16-89381b1e18db@email.webhook.site"
-                  data: '{ "server": "1", "site": "site 1"}'
+                  webhook_url: "http://localhost:8001/api/webhook"
+                  data: '{ "server": "15", "site": "https://password-component.vercel.app"}'
