@@ -22,4 +22,4 @@ jobs:
               env:
                   webhook_url: "https://webhook.site/06a2f70f-2bda-4bbc-8f5c-74f5faf20e01"
                   webhook_secret: "06a2f70f-2bda-4bbc-8f5c-74f5faf20e01@email.webhook.site"
-                  data: '{ "server": "15", "site": "https://password-component.vercel.app"}'
+                  data: '{ "server": "1", "site": "site 1"}'
