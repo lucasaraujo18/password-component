@@ -7,6 +7,7 @@ import "./mobile.scss";
 export function NavbarSystem() {
     return (
         <>
+            {/* DESKTOP */}
             <div className="nav-bar">
                 <ul>
                     <li>
@@ -23,6 +24,8 @@ export function NavbarSystem() {
                     </li>
                 </ul>
             </div>
+            {/* MOBILE */}
+
 
             <Outlet />
         </>

@@ -1,0 +1,25 @@
+# This is a basic workflow that is manually triggered
+name: Deploy
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI or API.
+on:
+    # Trigger the workflow on push or pull request,
+    # but only for the master branch
+    push:
+        branches: [master]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+    deploy_application:
+        # The type of runner that the job will run on
+        runs-on: ubuntu-latest
+
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+            # Runs a single command using the runners shell
+            - name: Invoke deployment hook
+              uses: distributhor/workflow-webhook@v2
+              env:
+                  webhook_url: "https://webhook.site/06a2f70f-2bda-4bbc-8f5c-74f5faf20e01"
+                  webhook_secret: "06a2f70f-2bda-4bbc-8f5c-74f5faf20e01@email.webhook.site"
+                  data: '{ "server": "15", "site": "https://password-component.vercel.app"}'
